@@ -13,6 +13,8 @@ from utils import Token
 
 # Handling database creation
 if settings.TESTING:
+    if os.path.exists(settings.TEST_APP_DB):
+        os.remove(settings.TEST_APP_DB)
     db.init(settings.TEST_APP_DB)
     db.connect()
     db.create_tables([User])
@@ -88,7 +90,7 @@ def get_info_user(token: hug.directives.user):
 
 @login_required.put("/users", versions=1)
 def update_info_user(token: hug.directives.user, first_name=None, last_name=None, blog=None, password=None):
-    """This api updates the info about the user"""
+    """This api updates info about the user"""
 
     user = User.get(User.id == token['user_id'])
     data = locals().copy()

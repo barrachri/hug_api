@@ -3,7 +3,6 @@ from os import urandom
 from base64 import urlsafe_b64encode
 from datetime import datetime, timedelta
 from functools import wraps
-
 # 3rd party lib imports
 import jwt
 from itsdangerous import URLSafeTimedSerializer, BadSignature

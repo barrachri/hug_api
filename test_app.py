@@ -11,9 +11,7 @@ from utils import Token
 token = Token(settings.KEY)
 
 def teardown_module(module):
-    """ teardown any state that was previously setup with a setup_module
-    method.
-    """
+    """It removes the test db after run all tests"""
     os.remove(settings.TEST_APP_DB)
 
 class TestApp():
