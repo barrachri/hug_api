@@ -1,5 +1,15 @@
+ecdsa==0.13
 falcon==1.0.0
+gunicorn==19.6.0
 hug==2.1.2
+invoke==0.13.0
+itsdangerous==0.24
+paramiko==1.17.2
+peewee==2.8.2
+py==1.4.31
+pycrypto==2.6.1
+PyJWT==1.4.2
+pytest==2.9.2
 python-mimeparse==1.5.2
 requests==2.11.0
 six==1.10.0
